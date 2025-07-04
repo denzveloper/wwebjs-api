@@ -7,12 +7,12 @@
   },
   "servers": [
     {
-      "url": "",
-      "description": ""
+      "url": "/",
+      "description": "default server"
     },
     {
       "url": "http://localhost:3000",
-      "description": "localhost"
+      "description": "localhost server"
     }
   ],
   "tags": [
@@ -1163,7 +1163,7 @@
                     "example": []
                   },
                   "options": {
-                    "type": "array",
+                    "type": "object",
                     "description": "An object that handles options for group creation",
                     "example": {}
                   }
@@ -1185,7 +1185,7 @@
                     "example": []
                   },
                   "options": {
-                    "type": "array",
+                    "type": "object",
                     "description": "An object that handles options for group creation",
                     "example": {}
                   }
@@ -6838,8 +6838,8 @@
         "tags": [
           "Group Chat"
         ],
-        "summary": "Add the participant(s)",
-        "description": "Add a list of participants by id to the group",
+        "summary": "Add the participants",
+        "description": "Add a list of participants by ID to the group",
         "parameters": [
           {
             "name": "sessionId",
@@ -6914,10 +6914,12 @@
                     "description": "Unique WhatsApp id for the given chat group",
                     "example": "XXXXXXXXXX@g.us"
                   },
-                  "contactIds": {
-                    "type": "string",
-                    "description": "Unique WhatsApp identifier for the contact",
-                    "example": "6281288888887@c.us"
+                  "participantIds": {
+                    "type": "array",
+                    "description": "Unique WhatsApp identifiers for the participants",
+                    "example": [
+                      "6281288888887@c.us"
+                    ]
                   },
                   "options": {
                     "type": "object",
@@ -6942,10 +6944,12 @@
                     "description": "Unique WhatsApp id for the given chat group",
                     "example": "XXXXXXXXXX@g.us"
                   },
-                  "contactIds": {
-                    "type": "string",
-                    "description": "Unique WhatsApp identifier for the contact",
-                    "example": "6281288888887@c.us"
+                  "participantIds": {
+                    "type": "array",
+                    "description": "Unique WhatsApp identifiers for the participants",
+                    "example": [
+                      "6281288888887@c.us"
+                    ]
                   },
                   "options": {
                     "type": "object",
@@ -6970,8 +6974,8 @@
         "tags": [
           "Group Chat"
         ],
-        "summary": "Demote the participant(s)",
-        "description": "Demote participants by ids to regular users",
+        "summary": "Demote the participants",
+        "description": "Demote participants by ID to regular users",
         "parameters": [
           {
             "name": "sessionId",
@@ -7046,10 +7050,12 @@
                     "description": "Unique WhatsApp id for the given chat group",
                     "example": "XXXXXXXXXX@g.us"
                   },
-                  "contactIds": {
-                    "type": "string",
-                    "description": "Unique WhatsApp identifier for the contact",
-                    "example": "6281288888887@c.us"
+                  "participantIds": {
+                    "type": "array",
+                    "description": "Unique WhatsApp identifiers for the participants",
+                    "example": [
+                      "6281288888887@c.us"
+                    ]
                   }
                 }
               }
@@ -7063,10 +7069,12 @@
                     "description": "Unique WhatsApp id for the given chat group",
                     "example": "XXXXXXXXXX@g.us"
                   },
-                  "contactIds": {
-                    "type": "string",
-                    "description": "Unique WhatsApp identifier for the contact",
-                    "example": "6281288888887@c.us"
+                  "participantIds": {
+                    "type": "array",
+                    "description": "Unique WhatsApp identifiers for the participants",
+                    "example": [
+                      "6281288888887@c.us"
+                    ]
                   }
                 }
               }
@@ -7280,8 +7288,8 @@
         "tags": [
           "Group Chat"
         ],
-        "summary": "Promote the participant(s)",
-        "description": "Promote participants by IDs to admins",
+        "summary": "Promote the participants",
+        "description": "Promote participants by ID to admins",
         "parameters": [
           {
             "name": "sessionId",
@@ -7356,10 +7364,12 @@
                     "description": "Unique WhatsApp id for the given chat group",
                     "example": "XXXXXXXXXX@g.us"
                   },
-                  "contactIds": {
-                    "type": "string",
-                    "description": "Unique WhatsApp identifier for the contact",
-                    "example": "6281288888887@c.us"
+                  "participantIds": {
+                    "type": "array",
+                    "description": "Unique WhatsApp identifiers for the participants",
+                    "example": [
+                      "6281288888887@c.us"
+                    ]
                   }
                 }
               }
@@ -7373,10 +7383,12 @@
                     "description": "Unique WhatsApp id for the given chat group",
                     "example": "XXXXXXXXXX@g.us"
                   },
-                  "contactIds": {
-                    "type": "string",
-                    "description": "Unique WhatsApp identifier for the contact",
-                    "example": "6281288888887@c.us"
+                  "participantIds": {
+                    "type": "array",
+                    "description": "Unique WhatsApp identifiers for the participants",
+                    "example": [
+                      "6281288888887@c.us"
+                    ]
                   }
                 }
               }
@@ -7390,7 +7402,7 @@
         "tags": [
           "Group Chat"
         ],
-        "summary": "Remove the participant(s)",
+        "summary": "Remove the participants",
         "description": "Remove a list of participants by ID to the group",
         "parameters": [
           {
@@ -7466,10 +7478,12 @@
                     "description": "Unique WhatsApp id for the given chat group",
                     "example": "XXXXXXXXXX@g.us"
                   },
-                  "contactIds": {
-                    "type": "string",
-                    "description": "Unique WhatsApp identifier for the contact",
-                    "example": "6281288888887@c.us"
+                  "participantIds": {
+                    "type": "array",
+                    "description": "Unique WhatsApp identifiers for the participants",
+                    "example": [
+                      "6281288888887@c.us"
+                    ]
                   }
                 }
               }
@@ -7483,10 +7497,12 @@
                     "description": "Unique WhatsApp id for the given chat group",
                     "example": "XXXXXXXXXX@g.us"
                   },
-                  "contactIds": {
-                    "type": "string",
-                    "description": "Unique WhatsApp identifier for the contact",
-                    "example": "6281288888887@c.us"
+                  "participantIds": {
+                    "type": "array",
+                    "description": "Unique WhatsApp identifiers for the participants",
+                    "example": [
+                      "6281288888887@c.us"
+                    ]
                   }
                 }
               }

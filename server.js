@@ -16,6 +16,7 @@ if (!baseWebhookURL && enableWebHook) {
 
 const server = app.listen(port, () => {
   logger.info(`Server running on port ${port}`)
+  logger.debug({ configuration: require('./src/config') }, 'Service configuration')
 })
 
 if (enableWebSocket) {

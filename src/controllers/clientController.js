@@ -250,7 +250,7 @@ const createGroup = async (req, res) => {
             example: []
           },
           options: {
-            type: 'array',
+            type: 'object',
             description: 'An object that handles options for group creation',
             example: {}
           },

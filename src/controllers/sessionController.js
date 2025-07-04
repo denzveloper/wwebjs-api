@@ -105,6 +105,8 @@ const sessionQrCode = async (req, res) => {
       return res.json({ success: false, message: 'session_not_found' })
     }
     if (session.qr) {
+      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate')
+      res.setHeader('Expires', 0)
       return res.json({ success: true, qr: session.qr })
     }
     return res.json({ success: false, message: 'qr code not ready or already scanned' })
@@ -144,6 +146,8 @@ const sessionQrCodeImage = async (req, res) => {
         }
       */
       res.writeHead(200, {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        Expires: 0,
         'Content-Type': 'image/png'
       })
       return qrImage.pipe(res)
